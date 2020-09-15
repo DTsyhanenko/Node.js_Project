@@ -4,7 +4,13 @@
 
     </head>
     <body>
-        <strong>Hallo Welt: <%= title %></strong>
+        <%= entries.length %>
+        <% for(let entry of entries) { %>
+            <div>
+                <h3><%= entry.title %></h3>
+                <p><%= entry.content %></p>
+            </div>
+        <% } %>
         
 
         <script type="text/javascript" src="/js/index.js"></script>

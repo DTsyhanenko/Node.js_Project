@@ -1,6 +1,8 @@
 "use strict";
 
 let express = require("express");
+// import express, { static } from "express"; eine neuere Version von dieser Schreibweise: Import
+let GuestbookEntry = require("./src/GuestbookEntry");
 
 let app = express();
 app.set("view engine", "ejs");
@@ -9,12 +11,13 @@ app.set("views", "./views");
 app.use(express.static("./public")); //damit schliessen wir die css an, weil man sonst kein Zugriff hat
 
 let entries = [
-    {title: "Ueberschrift", content: "Ich bin der Inhalt"}
+    new GuestbookEntry("Ich bin die Ueberschrift", "Ich bin der Inhalt!"),
+    new GuestbookEntry("2. Eintrag", "Ich bin der Inhalt!"),
 ];
 
 app.get("/index", (req, res) => {
     res.render("index", {
-        title: "Mars"
+        entries: entries
     });
 });
 
