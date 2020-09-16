@@ -6,11 +6,21 @@
     <body>
         <%= entries.length %>
         <% for(let entry of entries) { %>
-            <div>
+            <div class="entry">
                 <h3><%= entry.title %></h3>
                 <p><%= entry.content %></p>
             </div>
         <% } %>
+
+        <form class="new-entry" method="POST" action="/guestbook/new">
+            <label for="title">Titel:</label><br />
+            <input type="text" name="title" id="title" />
+            <br />
+            <label for="content">Inhalt:</label><br />
+            <textarea name="content" id="content"></textarea>
+            <br />
+            <input type="submit" value="Absenden" name="submit">
+        </form>
         
 
         <script type="text/javascript" src="/js/index.js"></script>

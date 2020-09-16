@@ -1,4 +1,21 @@
 body {
   background-color: #646464;
+  font-family: "Helvetica", "Helvetica Neue", "arial";
+}
+
+.entry {
+  background-color: #ffffff;
+  border: 1px solid black;
+  padding: 10px 5px 10px 5px;
+}
+
+.entry h3 {
+  margin-top: 0px;
+}
+
+.new-entry {
+  background-color: #ffffff;
+  border: 1px solid black;
+  padding: 5px;
 }
 /*# sourceMappingURL=app.css.map */

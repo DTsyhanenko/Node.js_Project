@@ -1,5 +1,20 @@
 $grey-color: rgb(100, 100, 100);
+$white-color: #ffffff;
 
 body {
     background-color: $grey-color;
+    font-family: "Helvetica", "Helvetica Neue", "arial";
+}
+.entry {
+    background-color: $white-color;
+    border: 1px solid black;
+    padding: 10px 5px 10px 5px;
+}
+.entry h3 {
+    margin-top: 0px;
+}
+.new-entry {
+    background-color: $white-color;
+    border: 1px solid black;
+    padding: 5px;
 }
