@@ -47,6 +47,6 @@ fs.readFile("./data.json", "utf-8", (err, data) => {
         res.redirect("/index");
     });
     app.listen(5000, () => { //damit sagen wir das der Browser auf Port 5000 zuhoeren soll
-        console.log("App wurde gestertet auf localhost:5000");
+        console.log("App wurde gestartet auf localhost:5000");
     });
 });
