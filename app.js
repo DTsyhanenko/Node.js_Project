@@ -43,7 +43,10 @@ fs.readFile("./data.json", "utf-8", (err, data) => {
         entries.push(newEntry);
         //res.write("Erfolgreich!");
         //res.end(); fuer eine Erfolgsmeldung ueber einen gespeicherten Beitrag
-    
+        
+        // Schreibe die Daten in die Datei
+        fs.writeFile("./data.json", JSON.stringify(entries));
+
         res.redirect("/index");
     });
     app.listen(5000, () => { //damit sagen wir das der Browser auf Port 5000 zuhoeren soll
