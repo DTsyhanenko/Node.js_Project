@@ -1,6 +1,6 @@
 "use strict";
 
-jQuery(documnent).ready(function($) {
+jQuery(document).ready(function($) {
 
     let form = $(".new-entry");
 
@@ -16,9 +16,17 @@ jQuery(documnent).ready(function($) {
             data: {
                 "title": title,
                 "content": content
+            },
+            success: function(data) {
+                let div = $.parseHTML("<div></div>");
+                $(div).html(data);
+                let newEntries = $(".entry", div);
+
+                $("#guestbook-entries .entry").remove();
+                newEntries.each(function(i, newEntry) {
+                    $("#guestbook-entries").append(newEntry);
+                });
             }
-        })
-        alert(title);
-        alert(content);
+        });
     });
 });
